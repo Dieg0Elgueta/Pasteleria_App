@@ -73,11 +73,19 @@ dependencies {
     kapt("androidx.room:room-compiler:2.6.1")
     implementation("androidx.navigation:navigation-compose:2.7.5")
 
+    //Iconos
     implementation("androidx.compose.material:material-icons-extended:1.5.4")
-// O si solo quieres los íconos básicos:
     implementation("androidx.compose.material:material-icons-core:1.5.4")
-// Asegúrate de tener estas también:
     implementation("androidx.compose.material3:material3:1.1.2")
     implementation("androidx.compose.ui:ui:1.5.4")
+
+    //Retrofit y Gson Converter
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+
+    //Corrutinas
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
+    //Jetpack Compose
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.7.0")
 }
 

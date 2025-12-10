@@ -10,6 +10,7 @@ import com.example.pasteleria_mil_sabores.ui.screen.CartScreen
 import com.example.pasteleria_mil_sabores.ui.screen.HomeScreen
 import com.example.pasteleria_mil_sabores.ui.screen.LoginScreen
 import com.example.pasteleria_mil_sabores.ui.screen.PerfilScreen
+import com.example.pasteleria_mil_sabores.ui.screen.PostScreen
 import com.example.pasteleria_mil_sabores.ui.screen.RegistroScreen
 import com.example.pasteleria_mil_sabores.ui.screen.SplashScreen
 
@@ -21,6 +22,7 @@ fun AppNavigation(){
         composable("splash"){ SplashScreen(navController = navController) }
         composable("login"){ LoginScreen(navController = navController) }
         composable ("registro"){ RegistroScreen(navController = navController) }
+        composable ("posts"){ PostScreen() }
 
         composable("home"){
             HomeScreen(navController = navController, usuarioId = 0)
@@ -40,7 +42,6 @@ fun AppNavigation(){
             val usuarioId = backStackEntry.arguments?.getString("usuarioId")?.toInt() ?: 0
             CartScreen(navController = navController, usuarioId = usuarioId)
         }
-
     }
 }
 

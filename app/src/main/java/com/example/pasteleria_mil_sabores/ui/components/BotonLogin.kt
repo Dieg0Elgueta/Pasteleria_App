@@ -22,8 +22,8 @@ fun BotonLogin(texto: String, onClickAccion: () -> Unit) {
     Button(
         onClick = onClickAccion,
         modifier = Modifier
-            .width(250.dp)
-            .height(55.dp)
+            .width(100.dp)
+            .height(35.dp)
             .background(
                 brush = Brush.verticalGradient(
                     colors = listOf(
@@ -55,7 +55,7 @@ fun BotonLogin(texto: String, onClickAccion: () -> Unit) {
         Text(
             text = texto,
             color = Color(0xFFFFF5E1),
-            fontSize = 18.sp,
+            fontSize = 10.sp,
             fontWeight = FontWeight.Bold,
             letterSpacing = 0.8.sp
         )

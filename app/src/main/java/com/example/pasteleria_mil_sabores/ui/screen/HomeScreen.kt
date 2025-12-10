@@ -9,7 +9,9 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -154,29 +156,45 @@ fun HomeScreenContent(
                     .padding(horizontal = 16.dp, vertical = 8.dp),
                 horizontalArrangement = Arrangement.SpaceBetween
             ) {
-                Box(
-                    modifier = Modifier.weight(1f)
-                ) {
-                    BotonLogin(
-                        texto = "Mi Perfil",
-                        onClickAccion = {
-                            navController.navigate("perfil/$usuarioId")
-                        }
-                    )
-                }
+                // Botón Mi Perfil
+                BotonLogin(
+                    texto = "Mi Perfil",
+                    onClickAccion = {
+                        navController.navigate("perfil/$usuarioId")
+                    }
+                )
 
-                Spacer(modifier = Modifier.width(8.dp))
+                Spacer(modifier = Modifier.width(4.dp))
+
+                // Botón Post Api
+                BotonLogin(
+                    texto = "Post Api",
+                    onClickAccion = {
+                        navController.navigate("posts")
+                    }
+                )
+
+                Spacer(modifier = Modifier.width(4.dp))
 
                 // Botón Ver Carrito
                 Button(
                     onClick = { navController.navigate("carrito/$usuarioId") },
-                    modifier = Modifier.weight(1f),
+                    modifier = Modifier.height(40.dp),
                     colors = ButtonDefaults.buttonColors(
                         containerColor = Color(0xFFD2691E)
-                    )
+                    ),
+                    contentPadding = PaddingValues(horizontal = 8.dp, vertical = 4.dp)
                 ) {
-                    Icon(Icons.Default.ShoppingCart, "Ver carrito")
-                    Text("Ver Carrito", modifier = Modifier.padding(start = 8.dp))
+                    Icon(
+                        Icons.Default.ShoppingCart,
+                        "Ver carrito",
+                        modifier = Modifier.size(16.dp)
+                    )
+                    Text(
+                        "Ver Carrito",
+                        modifier = Modifier.padding(start = 4.dp),
+                        fontSize = 12.sp
+                    )
                 }
             }
 
