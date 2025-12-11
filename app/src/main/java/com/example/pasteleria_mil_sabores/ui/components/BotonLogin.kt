@@ -23,19 +23,10 @@ fun BotonLogin(texto: String, onClickAccion: () -> Unit) {
         onClick = onClickAccion,
         modifier = Modifier
             .width(100.dp)
-            .height(35.dp)
-            .background(
-                brush = Brush.verticalGradient(
-                    colors = listOf(
-                        Color(0xFF8B4513),
-                        Color(0xFF5D4037)
-                    )
-                ),
-                shape = RoundedCornerShape(16.dp)
-            ),
+            .height(35.dp),
         shape = RoundedCornerShape(16.dp),
         colors = ButtonDefaults.buttonColors(
-            containerColor = Color.Transparent
+            containerColor = Color(0xFF8B4513)
         ),
         contentPadding = PaddingValues(0.dp),
         elevation = ButtonDefaults.buttonElevation(

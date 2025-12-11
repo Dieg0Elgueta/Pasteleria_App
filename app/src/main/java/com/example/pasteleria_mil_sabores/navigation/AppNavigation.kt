@@ -22,7 +22,7 @@ fun AppNavigation(){
         composable("splash"){ SplashScreen(navController = navController) }
         composable("login"){ LoginScreen(navController = navController) }
         composable ("registro"){ RegistroScreen(navController = navController) }
-        composable ("posts"){ PostScreen() }
+        composable ("posts"){ PostScreen(navController = navController) }
 
         composable("home"){
             HomeScreen(navController = navController, usuarioId = 0)

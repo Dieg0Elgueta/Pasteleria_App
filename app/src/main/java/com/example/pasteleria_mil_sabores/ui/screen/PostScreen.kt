@@ -17,10 +17,12 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
+import androidx.navigation.NavController
+import com.example.pasteleria_mil_sabores.ui.components.BotonLogin
 import com.example.pasteleria_mil_sabores.viewmodel.PostViewModel
 
 @Composable
-fun PostScreen(){
+fun PostScreen(navController: NavController){
     val viewModel : PostViewModel = viewModel()
     val posts by viewModel.posts.collectAsState()
 
@@ -37,6 +39,15 @@ fun PostScreen(){
             text = "Listado de Posts",
             fontSize = 24.sp,
             color = Color.Blue
+        )
+
+        Spacer(modifier = Modifier.height(8.dp))
+
+        BotonLogin(
+            texto = "Volver",
+            onClickAccion = {
+                navController.popBackStack()
+            }
         )
 
         Spacer(modifier = Modifier.height(16.dp))
@@ -58,7 +69,6 @@ fun PostScreen(){
                     }
             }
         }
-
     }
 
 }
