@@ -135,7 +135,7 @@ fun HomeScreenContent(
                     horizontalAlignment = Alignment.CenterHorizontally
                 ) {
                     Text(
-                        text = "🎂 Pastelería Mil Sabores 🎂",
+                        text = "Pastelería Mil Sabores",
                         fontSize = 28.sp,
                         fontWeight = FontWeight.Bold,
                         color = Color(0xFF8B4513),

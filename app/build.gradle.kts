@@ -39,7 +39,9 @@ android {
     buildFeatures {
         compose = true
     }
-
+    testOptions {
+        animationsDisabled = true
+    }
 }
 
 dependencies {
@@ -87,5 +89,12 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
     //Jetpack Compose
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.7.0")
+
+    androidTestImplementation("androidx.compose.ui:ui-test-junit4:1.7.0")
+    debugImplementation("androidx.compose.ui:ui-test-manifest:1.7.0")
+
+    // Para usar Navigation en pruebas
+    androidTestImplementation("androidx.navigation:navigation-testing:2.7.5")
+
 }
 
